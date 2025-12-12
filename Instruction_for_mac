@@ -1,0 +1,119 @@
+Step-by-Step Setup Instructions
+Step 1: Create Project Structure
+bash# Navigate to Desktop
+cd ~/Desktop
+
+# Create main folder
+mkdir AI_andreas
+cd AI_andreas
+Step 2: Create the Python File
+bash# Create the file
+touch AI_andreas.py
+
+# Open it with default text editor
+open -e AI_andreas.py
+Now copy the code from the artifact into the opened file and save (CMD + S)
+Step 3: Create Virtual Environment
+bash# Make sure you're in the AI_andreas folder
+cd ~/Desktop/AI_andreas
+
+# Create virtual environment
+python3 -m venv venv
+
+# Activate virtual environment
+source venv/bin/activate
+
+# Your terminal should now show: (venv) user@macbook AI_andreas %
+Step 4: Install Dependencies
+bash# With virtual environment activated, install packages
+pip install streamlit ollama
+
+# Verify installation
+pip list
+Step 5: Setup Ollama
+Method 1: Direct Download (RECOMMENDED)
+bash# Open download page
+open https://ollama.com/download/mac
+
+Download the Ollama app
+Open the .dmg or .zip file
+Drag Ollama to Applications folder
+Open Ollama from Applications (it will run in background)
+You'll see the Ollama icon in the menu bar
+
+Method 2: Using Homebrew
+bash# Install Homebrew if you don't have it
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Ollama
+brew install ollama
+Download the AI Model:
+bash# Open a new terminal (keep the first one open!)
+# In the new terminal:
+
+# Download phi3 model
+ollama pull phi3
+
+# Verify it downloaded
+ollama list
+
+# Start Ollama service (if not already running)
+ollama serve
+Step 6: Run the Application
+bash# Back in the first terminal (where virtual environment is activated)
+cd ~/Desktop/AI_andreas
+
+# Make sure environment is activated (you should see (venv) in prompt)
+# If not activated:
+source venv/bin/activate
+
+# Run the application
+streamlit run AI_andreas.py
+Step 7: Access the Application
+
+Browser will automatically open at http://localhost:8501
+If it doesn't open automatically, manually navigate to this address
+
+
+📋 Complete Script - Copy and Execute Everything:
+Terminal 1 (Main Setup):
+bash# ===== PART 1: SETUP =====
+cd ~/Desktop
+mkdir AI_andreas
+cd AI_andreas
+
+# Create AI_andreas.py file
+open -e AI_andreas.py
+# Copy the code, save (CMD + S), and close
+
+# ===== PART 2: VIRTUAL ENVIRONMENT =====
+python3 -m venv venv
+source venv/bin/activate
+
+# ===== PART 3: INSTALL DEPENDENCIES =====
+pip install --upgrade pip
+pip install streamlit ollama
+
+# ===== PART 4: RUN APPLICATION =====
+streamlit run AI_andreas.py
+Terminal 2 (Separate - Ollama Setup):
+bash# Download and install Ollama first from:
+# https://ollama.com/download/mac
+
+# Then run:
+ollama pull phi3
+ollama serve
+
+🔄 For Future Sessions:
+Every time you want to run the application:
+bash# Navigate to project folder
+cd ~/Desktop/AI_andreas
+
+# Activate virtual environment
+source venv/bin/activate
+
+# Run the application
+streamlit run AI_andreas.py
+
+# To deactivate when done:
+deactivate
