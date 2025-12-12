@@ -21,7 +21,7 @@ Installation
 
 Clone the repository
 
-bashgit clone https://github.com/yourusername/ai-personal-assistant.git
+bashgit clone  https://github.com/Mustangul14/ai_bot.git
 cd ai-personal-assistant
 
 Create a virtual environment
