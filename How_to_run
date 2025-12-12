@@ -1,0 +1,8 @@
+
+cd ~/location/director - go to director 
+
+ollama serve - start 'ollama server'
+
+source venv/bin/activate - activate virtual env
+
+streamlit run files.py - run your's file
